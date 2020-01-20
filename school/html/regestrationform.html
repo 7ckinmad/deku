@@ -1,0 +1,70 @@
+<html><head><script>
+function validateForm() {
+  var f = document.forms["myForm"]["fname"].value;
+  if (f == "") {
+    alert("First name must be filled out");
+    return false;
+    }
+    var l = document.forms["myForm"]["lname"].value;
+    if (l == "") {
+    alert("Last name must be filled out");
+    return false;
+    }
+     var u = document.forms["myForm"]["user"].value;	
+    if (u == "") {
+    alert("User name must be filled out");
+    return false;
+    }
+    var p = document.forms["myForm"]["pass"].value;
+    if (p == "") {
+    alert("Password must be filled out");
+    return false;
+    }
+    var g = document.forms["myForm"]["gen"].value;
+    if (g == "p") {
+    alert("Please select appropriate gender");
+    
+    return false;
+    }
+    var aag = document.forms["myForm"]["ag"].value;
+    if (aag == "n") {
+    alert("You Have to agree to our terms");
+    return false;
+    }
+    alert("form submitted! see the information filled")
+    document.write("First name: ");
+    document.writeln(f);
+     document.write("<br>Last name: ");
+    document.writeln(l);
+     document.write("<br>Gender: ");
+    document.writeln(g);
+     document.write("<br>Username: ");
+    document.writeln(u);
+     document.write("<br>Password: ");
+    document.writeln(p);
+} 
+
+</script></head>
+<body bgcolor="black">
+<h1><font color=" a8ff33"> . / REGESTRATION FORM</h1></font>
+<hr style="border-top: dotted 1px;color: a8ff33;" />
+<br>
+<font color=" a8ff33">
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+First name:&ensp;&ensp;&ensp;&ensp;&ensp; <input type="text" name="fname">
+
+
+
+
+<br><br>Last name:&ensp;&ensp; &ensp;&ensp;&ensp;<input type="text" name="lname">
+<br><br>Gender:&ensp;&ensp; &ensp;&ensp;&ensp;&ensp;&ensp;<select name="gen"><option value="p"></option><option value="M">Male</option><option value="F">female</option></select>
+<br><br>Username:&ensp;&ensp; &ensp;&ensp;&ensp;<input type="text" name="user">
+<br><br>Password&ensp;&ensp;&ensp;&ensp; &ensp;&ensp;<input type="password" name="pass">
+<br><br><br>Do you Agree to our terms
+<br><input type="radio" name="ag" value="n" checked> Dont AGREE<input type="radio" name="ag" value="y"> AGREE<br><br>
+ 
+<br><input type="submit" value="Submit">
+</form</font>
+
+</body>
+</html>
